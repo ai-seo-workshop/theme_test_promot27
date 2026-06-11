@@ -4,7 +4,7 @@
 @section('description', $seoInfo->seo_desc ?? '')
 
 @section('canonical')
-<link rel="canonical" href="{{ route_slash() }}">
+<link rel="canonical" href="{{ route_slash('home') }}">
 @endsection
 
 @section('schema')
@@ -13,7 +13,7 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "{{ config('app.name') }}",
-  "url": "{{ route_slash() }}"
+  "url": "{{ route_slash('home') }}"
 }
 </script>
 @endsection
